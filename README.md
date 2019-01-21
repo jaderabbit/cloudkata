@@ -51,7 +51,7 @@ echo $FLASK_APP
 
 ### To Run 
 
-- `cd path/to/flask-postgresql-app/app`
+- `cd path/to/cloudkata/app`
 - `flask db upgrade && flask run -h 0.0.0.0 -p 5000`
 - Go to `http://0.0.0.0:5000/` in your browser
 
