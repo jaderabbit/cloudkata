@@ -19,8 +19,8 @@ Time limit: 1 hr
 
 - Install python (This should have been done)
 - Install postgresql (This should have been done)
-- `git clone <repopath>` 
-- `cd path/to/flask-postgresql-app`
+- `git clone git@github.com:jaderabbit/cloudkata.git` 
+- `cd path/to/cloudkata`
 - `pip install -r requirements.txt`
 
 
