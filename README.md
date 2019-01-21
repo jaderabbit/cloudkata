@@ -81,9 +81,12 @@ For the web server:
 3. Setup your ssh credentials for the box using the certificate. 
 4. Login to your EC2 box
 5. Install the web server
+6. Install postgresql
+7. Send me you URL when it works
 
-What about the database? Need to try create one. 
+## Layer 2: Platform as a Service
 
-## Layer 2
+Use Elastic Beanstalk to create python web server, and then use it to create an RDS instance for the database. You'll need to set environment variables here too, but they can be done via the interface
+
 
 
