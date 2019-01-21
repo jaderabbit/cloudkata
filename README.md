@@ -84,10 +84,22 @@ For the web server:
 6. Install postgresql
 7. Send me you URL when it works
 
-## Layer 2: Platform as a Service
+## Layer 2: Platform as a Service: Elastic Beanstalk and RDS
 
-Use Elastic Beanstalk to create python web server, and then use it to create an RDS instance for the database. You'll need to set environment variables here too, but they can be done via the interface
+Use Elastic Beanstalk to create the python web server, and then use it to create an RDS instance for the database. You'll need to set environment variables here too, but they can be done via the interface
 
+### What is Platform as a Service?
+
+Platform as a Service is an abstraction away from the hardware or VM. It's meant to remove the low level installation, running and management of services. 
+
+
+### What is Elastic Beanstalk?
+
+AWS Elastic Beanstalk is what we call an "application service". It makes deploying technologies super easy via the use of a super simple wizard. Additionally, it makes autoscaling, load-balancing and a variety of other things, SUPER easy
+
+### What is RDS?
+
+AWS RDS is a database service. Almost had it with installing postgresql in various places? Well, now you need not worry: AWS RDS handles that for you
 
 
 Source: [Azure Samples for a Flask Postrgesql App](https://github.com/Azure-Samples/flask-postgresql-app)
