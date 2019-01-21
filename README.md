@@ -86,7 +86,7 @@ For the web server:
 
 ## Layer 2: Platform as a Service: Elastic Beanstalk and RDS
 
-Use Elastic Beanstalk to create the python web server, and then use it to create an RDS instance for the database. You'll need to set environment variables here too, but they can be done via the interface
+Use Elastic Beanstalk to install and run the python web server, and then use it to create an RDS instance for the database. You'll need to set environment variables here too, but they can be done via the interface
 
 ### What is Platform as a Service?
 
