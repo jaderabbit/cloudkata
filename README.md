@@ -90,3 +90,4 @@ Use Elastic Beanstalk to create python web server, and then use it to create an 
 
 
 
+Source: [Azure Samples for a Flask Postrgesql App](https://github.com/Azure-Samples/flask-postgresql-app)
