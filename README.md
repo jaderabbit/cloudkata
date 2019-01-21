@@ -32,12 +32,22 @@ Time limit: 1 hr
 
 ### Create the following environment variables
 
-FLASK_APP=app.py
-DBUSER=test 
-DBPASS=test 
-DBHOST=localhost
-DBNAME=test
+- FLASK_APP=app.py
+- DBUSER=test 
+- DBPASS=test 
+- DBHOST=localhost
+- DBNAME=test
 
+In windows (run cmd as command):
+```
+setx -m FLASK_APP "app.py"
+echo %FLASK_APP%
+```
+In linux:
+```
+export FLASK_APP app.py
+echo $FLASK_APP
+```
 
 ### To Run 
 
