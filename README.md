@@ -1,18 +1,79 @@
----
-services: app-service\web,app-service
-platforms: python
-author: cephalin
----
+# Cloud Services Kata
 
-# Flask and PostgreSQL sample for Azure App Service
 
-This is a sample application that you can use to follow along with the tutorial at 
-[Build a Python and PostgreSQL web app in Azure](https://docs.microsoft.com/azure/app-service/app-service-web-tutorial-python-postgresql). 
+The goal of this Kata is get this tiny flask app up and running in 3 different ways and send me the url so that I can access it (NB!).
 
-The sample is a simple Python Flask application that connects to a PostgreSQL database via SQLAlchemy.
+These are the 3 different ways: 
+1. Locally on your own machine
+2. Using infrastructure in AWS (EC2)
+3. Using application services in AWS (Elastic Beanstalk)
 
-The database connection information is specified via environment variables `DBHOST`, `DBPASS`, `DBUSER`, and `DBNAME`. This app always uses the default PostgreSQL port.
+There are also 3 STRETCH challenges for those who manage to complete those 3 and can come show me. If you've managed, come let me know. 
 
-# Contributing
+## Layer 0: Local Installation
 
-This project has adopted the [Microsoft Open Source Code of Conduct](https://opensource.microsoft.com/codeofconduct/). For more information see the [Code of Conduct FAQ](https://opensource.microsoft.com/codeofconduct/faq/) or contact [opencode@microsoft.com](mailto:opencode@microsoft.com) with any additional questions or comments.
+For this one, I'll give you some guidance. 
+Time limit: 1 hr
+
+### Installation
+
+- Install python (This should have been done)
+- Install postgresql (This should have been done)
+- `git clone <repopath>` 
+- `cd path/to/flask-postgresql-app`
+- `pip install -r requirements.txt`
+
+
+### Database
+
+- Create a user called `test` with password `test`: 
+- Create a database called `test`. 
+
+
+### Create the following environment variables
+
+FLASK_APP=app.py
+DBUSER=test 
+DBPASS=test 
+DBHOST=localhost
+DBNAME=test
+
+
+### To Run 
+
+- `cd path/to/flask-postgresql-app/app`
+- `flask db upgrade && flask run -h 0.0.0.0 -p 5000`
+- Go to `http://0.0.0.0:5000/` in your browser
+
+### The challenge: Figure out how you're going to give me a url 
+
+Hint: Experts would grok this pretty quickly
+
+
+
+## Layer 1: Infrastructure as a Service: AWS EC2
+
+### What is IaaS?
+
+It's a hardware that you can rent online. Or in fancy words: "is a form of cloud computing that provides virtualized computing resources over the internet"
+
+### What is EC2?
+
+It's Amazon web services IaaS. It's a VM in the cloud.
+
+
+### How to proceed
+
+For the web server:
+
+1. Create an EC2 box. Linux one please
+2. Download the certificate
+3. Setup your ssh credentials for the box using the certificate. 
+4. Login to your EC2 box
+5. Install the web server
+
+What about the database? Need to try create one. 
+
+## Layer 2
+
+
