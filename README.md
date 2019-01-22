@@ -10,6 +10,8 @@ These are the 3 different ways:
 
 There are also 3 STRETCH challenges for those who manage to complete those 3 and can come show me. If you've managed, come let me know. 
 
+----------------------------------------------------
+
 ## Layer 0: Local Installation
 
 For this one, I'll give you some guidance. 
@@ -59,6 +61,7 @@ echo $FLASK_APP
 
 Hint: Experts would grok this pretty quickly
 
+--------------------------
 
 
 ## Layer 1: Infrastructure as a Service: AWS EC2
@@ -76,13 +79,17 @@ It's Amazon web services IaaS. It's a VM in the cloud.
 
 For the web server:
 
-1. Create an EC2 box. Linux one please
-2. Download the certificate
+1. Create an EC2 box (linux!). 
+2. Download the certificate. 
 3. Setup your ssh credentials for the box using the certificate. 
 4. Login to your EC2 box
-5. Install the web server
-6. Install postgresql
-7. Send me you URL when it works
+5. Clone the github repo and install the web server: similar to the first kata
+6. Install postgresql: https://github.com/snowplow/snowplow/wiki/Setting-up-PostgreSQL
+7. Setup the security groups so we can access it. (Do as demoed!)  
+7. Send me you URL when it works.
+
+----------------------------------------------------------------------------------------------------------------------------------
+
 
 ## Layer 2: Platform as a Service: Elastic Beanstalk and RDS
 
