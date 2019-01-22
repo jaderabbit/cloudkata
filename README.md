@@ -95,6 +95,20 @@ For the web server:
 
 Use Elastic Beanstalk to install and run the python web server, and then use it to create an RDS instance for the database. You'll need to set environment variables here too, but they can be done via the interface
 
+You have the option of using the INTERFACE or using the [AWS CLI](https://aws.amazon.com/cli/)
+
+Interface:
+1. Create an elastic beanstalk app
+2. Update the WSGIPath to point to app/application.py
+3. Create a database by going to the elastic beanstalk configuration and clicking on database and creating a new postgres database
+4. Once created, go to the elastic beanstalk configuration and click software. Add your environment variables
+5. Challenge: Run Migrations on startup! You'll need to create a folder with the flask command
+
+CLI: 
+- [Here](https://docs.aws.amazon.com/elasticbeanstalk/latest/dg/create-deploy-python-flask.html)
+
+
+
 ### What is Platform as a Service?
 
 Platform as a Service is an abstraction away from the hardware or VM. It's meant to remove the low level installation, running and management of services. 
