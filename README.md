@@ -34,7 +34,7 @@ Time limit: 1 hr
 
 ### Create the following environment variables
 
-- FLASK_APP=app.py
+- FLASK_APP=application.py
 - DBUSER=test 
 - DBPASS=test 
 - DBHOST=localhost
@@ -42,12 +42,12 @@ Time limit: 1 hr
 
 In windows (run cmd as command):
 ```
-setx -m FLASK_APP "app.py"
+setx -m FLASK_APP "application.py"
 echo %FLASK_APP%
 ```
 In linux:
 ```
-export FLASK_APP app.py
+export FLASK_APP application.py
 echo $FLASK_APP
 ```
 
@@ -81,11 +81,11 @@ For the web server:
 
 1. Create an EC2 box (linux!). 
 2. Download the certificate. 
-3. Setup your ssh credentials for the box using the certificate. 
+3. Setup your ssh credentials for the box using the certificate. ([putty & puttygen](https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/putty.html) or OpenSSL - you might have installed OpenSSL when you installed git!)
 4. Login to your EC2 box
 5. Clone the github repo and install the web server: similar to the first kata
 6. Install postgresql: https://github.com/snowplow/snowplow/wiki/Setting-up-PostgreSQL
-7. Setup the security groups so we can access it. (Do as demoed!)  
+7. Setup the security groups so we can access it. (Do as demoed! Open up the ports!)  
 7. Send me you URL when it works.
 
 ----------------------------------------------------------------------------------------------------------------------------------
