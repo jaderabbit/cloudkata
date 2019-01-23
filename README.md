@@ -42,7 +42,7 @@ Time limit: 1 hr
 
 In windows (run cmd as command):
 ```
-setx -m FLASK_APP "application.py"
+setx FLASK_APP "application.py"
 echo %FLASK_APP%
 ```
 In linux:
