@@ -12,32 +12,33 @@ database_uri = 'postgresql+psycopg2://{dbuser}:{dbpass}@{dbhost}/{dbname}'.forma
     dbname=os.environ['DBNAME']
 )
 
-app = Flask(__name__)
-app.config.update(
+application = Flask(__name__)
+application.config.update(
     SQLALCHEMY_DATABASE_URI=database_uri,
     SQLALCHEMY_TRACK_MODIFICATIONS=False,
 )
 
 # initialize the database connection
-db = SQLAlchemy(app)
+db = SQLAlchemy(application)
 
 # initialize database migration management
-migrate = Migrate(app, db)
+migrate = Migrate(application, db)
 
 
-@app.route('/')
+@application.route('/')
+@application.route('/index')
 def view_registered_guests():
     from models import Guest
     guests = Guest.query.all()
     return render_template('guest_list.html', guests=guests)
 
 
-@app.route('/register', methods=['GET'])
+@application.route('/register', methods=['GET'])
 def view_registration_form():
     return render_template('guest_registration.html')
 
 
-@app.route('/register', methods=['POST'])
+@application.route('/register', methods=['POST'])
 def register_guest():
     from models import Guest
     name = request.form.get('name')
@@ -50,11 +51,11 @@ def register_guest():
     return render_template(
         'guest_confirmation.html', name=name, email=email)
 
-# run the app.
+# run the application.
 if __name__ == "__main__":
     # Setting debug to True enables debug output. This line should be
-    # removed before deploying a production app.
+    # removed before deploying a production application.
     db.create_all()
 
-    app.debug = True
-    app.run()
+    application.debug = True
+    application.run()
