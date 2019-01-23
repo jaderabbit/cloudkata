@@ -49,3 +49,10 @@ def register_guest():
 
     return render_template(
         'guest_confirmation.html', name=name, email=email)
+
+# run the app.
+if __name__ == "__main__":
+    # Setting debug to True enables debug output. This line should be
+    # removed before deploying a production app.
+    app.debug = True
+    app.run()
