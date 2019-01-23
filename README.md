@@ -47,7 +47,7 @@ echo %FLASK_APP%
 ```
 In linux:
 ```
-export FLASK_APP application.py
+export FLASK_APP=application.py
 echo $FLASK_APP
 ```
 
