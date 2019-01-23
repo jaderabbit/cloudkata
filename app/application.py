@@ -54,5 +54,7 @@ def register_guest():
 if __name__ == "__main__":
     # Setting debug to True enables debug output. This line should be
     # removed before deploying a production app.
+    db.create_all()
+
     app.debug = True
     app.run()
