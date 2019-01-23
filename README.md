@@ -54,8 +54,8 @@ echo $FLASK_APP
 ### To Run 
 
 - `cd path/to/cloudkata/app`
-- `flask db upgrade && flask run -h 0.0.0.0 -p 5000`
-- Go to `http://0.0.0.0:5000/` in your browser
+- `flask db upgrade && flask run -h 127.0.0.1 -p 5000`
+- Go to `http://127.0.0.1:5000/` in your browser
 
 ### The challenge: Figure out how you're going to give me a url 
 
